@@ -8,5 +8,5 @@ WITH property_bookings AS (
 SELECT 
   property_id,
   total_bookings,
-  RANK() OVER (ORDER BY total_bookings DESC) AS rank
+  ROW_NUMBER() OVER (ORDER BY total_bookings DESC) AS row_number
 FROM property_bookings;
