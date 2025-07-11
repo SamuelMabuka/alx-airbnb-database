@@ -7,14 +7,13 @@ SELECT
 FROM bookings
 INNER JOIN users ON bookings.user_id = users.user_id;
 
-SELECT 
-  properties.property_id,
+SELECT
   properties.title,
-  reviews.review_id,
   reviews.rating,
   reviews.comment
 FROM properties
 LEFT JOIN reviews ON properties.property_id = reviews.property_id;
+
 
 SELECT 
   users.user_id,
